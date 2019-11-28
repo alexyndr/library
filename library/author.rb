@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 class Author
-  attr_reader :name, :biograph
+  attr_reader :name, :biography
 
-  def initialize(name, biograph = '')
+  def initialize(name, biography = '')
     @name = name.to_s
-    @biograph = biograph
+    @biography = biography
   end
 end

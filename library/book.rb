@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'author'
-
 class Book
   attr_reader :author, :title
 

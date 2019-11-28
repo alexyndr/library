@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'reader'
-require_relative 'book'
-
 class Order
   attr_reader :reader, :book
 
