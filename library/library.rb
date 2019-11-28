@@ -2,11 +2,6 @@
 
 require 'yaml'
 
-autoload :Author, './library/author'
-autoload :Book,   './library/book'
-autoload :Order,  './library/order'
-autoload :Reader, './library/reader'
-
 class Library
   attr_reader :books, :orders, :readers, :authors
 
