@@ -1,15 +1,17 @@
 # frozen_string_literal: true
 
 require 'yaml'
-require_relative 'author'
-require_relative 'reader'
-require_relative 'order'
-require_relative 'book'
+
+autoload :Author, './library/author'
+autoload :Book,   './library/book'
+autoload :Order,  './library/order'
+autoload :Reader, './library/reader'
 
 class Library
   attr_reader :books, :orders, :readers, :authors
 
   current_path = File.dirname(__FILE__)
+
   FILE_PATH = current_path + '/../data/data.yml'
 
   def initialize
@@ -30,9 +32,7 @@ class Library
   end
 
   def add_orders(book, reader)
-    if book.is_a?(Book) && reader.is_a?(Reader)
-      @orders.push(Order.new(book, reader))
-    end
+    @orders.push(Order.new(book, reader)) if book.is_a?(Book) && reader.is_a?(Reader)
   end
 
   def top_reader(lib, readers = 1)
