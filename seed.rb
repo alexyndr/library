@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+autoload :Author,  './library/author'
+autoload :Book,    './library/book'
+autoload :Order,   './library/order'
+autoload :Reader,  './library/reader'
 autoload :Library, './library/library'
 
 library = Library.load || Library.new
