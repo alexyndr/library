@@ -1,0 +1,19 @@
+--- !ruby/object:Library
+books:
+- &1 !ruby/object:Book
+  title: title1
+  author: &3 !ruby/object:Author
+    name: aut_name1
+    biography: ''
+orders:
+- !ruby/object:Order
+  book: *1
+  reader: &2 !ruby/object:Reader
+    name: name_reader1
+    email: email1
+    city: city1
+  date: 2019-12-09 13:36:09.634098249 +02:00
+readers:
+- *2
+authors:
+- *3
